@@ -8,8 +8,12 @@
 
 #import "FlipsideViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (retain, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
+@property (retain, nonatomic) IBOutlet UIImageView *photoView;
 
 - (IBAction)showInfo:(id)sender;
+- (IBAction)cameraButtonPressed:(id)sender;
+- (IBAction)imageButtonPressed:(id)sender;
 
 @end
